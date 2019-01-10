@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 import allProjects from '../projects_data.js'
 import WorkIcon from './WorkIcon.js'
+import '../css/work.scss'
 
 class Work extends Component {
 
   render() {
     let projects = allProjects.map(project => <WorkIcon project={project}/>)
     return (
-      <div>
+      <div className="work">
         {projects}
       </div>
     )

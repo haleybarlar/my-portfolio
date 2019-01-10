@@ -1,0 +1,18 @@
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: 13%;
+  margin-right: 13%;
+
+  p {
+    font-size: 1.1rem;
+    text-align: left;
+    width: 100%;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    float: right;
+  }
+}

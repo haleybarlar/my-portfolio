@@ -4,7 +4,7 @@
   width: 2rem;
   height: 1rem;
   right: 0;
-  margin-top: 4%;
+  margin-top: 5%;
   margin-right: 13%;
 }
 
@@ -62,7 +62,11 @@ div.bm-item:focus {
   background: rgba(0, 0, 0, 0.3);
 }
 
+a {
+  text-decoration: none;
+}
+
 p {
-  color: #7a7a7a;
+  color: black;
   font-size: 1.3rem;
 }

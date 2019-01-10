@@ -1,12 +1,13 @@
 .container {
   position: relative;
-  width: 30rem;
+  width: 100%;
 }
 
 .icon-img {
   display: block;
-  width: 30rem;
+  width: 100%;
   height: auto;
+  border: 1px solid black;
 }
 
 .overlay {
@@ -20,6 +21,10 @@
   opacity: 0;
   transition: .5s ease;
   background-color: #008CBA;
+}
+
+.container:hover{
+  cursor: pointer;
 }
 
 .container:hover .overlay {
