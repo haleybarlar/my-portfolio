@@ -1,15 +1,13 @@
-import React, { Component } from 'react'
+import { slide as Menu } from 'react-burger-menu'
+import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import '../css/navbar.scss'
-import Burger from './Burger.js'
+import '../css/burger.scss'
 
-class Navbar extends Component {
+class Burger extends Component {
 
-  render() {
+  render () {
     return (
-      <div className="navbar">
-        <h1>HALEY<span>BARLAR</span></h1>
-        <Burger />
+      <Menu right>
         <div className="nav-right">
           <Link to="/">
             <p>HOME</p>
@@ -21,9 +19,9 @@ class Navbar extends Component {
             <p>CONTACT</p>
           </Link>
         </div>
-      </div>
+      </Menu>
     )
   }
 }
 
-export default Navbar
+export default Burger
