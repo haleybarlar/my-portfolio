@@ -15,7 +15,7 @@ class Work extends Component {
       <div className="work">
         <h1>Development</h1>
         {developmentProjects}
-        <h1>Fibers</h1>
+        <h1>Fibers hello</h1>
         {fibersProjects}
       </div>
     )
