@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import '../css/WorkIcon.scss'
 
-class WorkIcon extends Component {
+class FibersIcon extends Component {
 
   render() {
     return (
@@ -15,4 +15,4 @@ class WorkIcon extends Component {
   }
 }
 
-export default WorkIcon
+export default FibersIcon

@@ -1,27 +1,25 @@
 import React, { Component } from 'react'
 import allProjects from '../projects_data.js'
-import WorkIcon from './WorkIcon.js'
+import DevelopmentIcon from './DevelopmentIcon.js'
+import FibersIcon from './FibersIcon.js'
 import '../css/work.scss'
 
 class Work extends Component {
 
   render() {
-    let projects = allProjects.map(project => <WorkIcon project={project}/>)
+    let developmentProjects = allProjects.filter(project => project.type === 'development').map(project => <DevelopmentIcon project={project}/>)
+
+    let fibersProjects = allProjects.filter(project => project.type === 'fibers').map(project => <FibersIcon project={project}/>)
+
     return (
       <div className="work">
-        {projects}
+        <h1>Development</h1>
+        {developmentProjects}
+        <h1>Fibers</h1>
+        {fibersProjects}
       </div>
     )
   }
 }
 
 export default Work
-
-// <h1>Development</h1>
-// <img src={'./mindful.png'} alt=""/>
-// <img src={'./yogaCycle.png'} alt=""/>
-// <img src={'./DH.png'} alt=""/>
-// <h1>Fibers</h1>
-// <img src={'./group.jpg'} alt=""/>
-// <img src={'./beaded.JPG'} alt=""/>
-// <img src={'./molded.JPG'} alt=""/>
