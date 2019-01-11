@@ -27,7 +27,6 @@ class App extends Component {
       id: id,
       currentProject: currentProject
     })
-
   }
 
   handleClick = (event, currentProject) => {
