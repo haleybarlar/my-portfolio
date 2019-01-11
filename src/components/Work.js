@@ -13,9 +13,9 @@ class Work extends Component {
 
     return (
       <div className="work">
-        <h1>Development</h1>
+        <h1>DEVELOPMENT</h1>
         {developmentProjects}
-        <h1>Fibers hello</h1>
+        <h1>FIBERS</h1>
         {fibersProjects}
       </div>
     )

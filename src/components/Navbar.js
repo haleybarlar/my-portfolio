@@ -8,7 +8,9 @@ class Navbar extends Component {
   render() {
     return (
       <div className="navbar">
-        <h1>HALEY<span>BARLAR</span></h1>
+        <Link to="/">
+          <h1>HALEY<span>BARLAR</span></h1>
+        </Link>
         <Burger />
         <div className="nav-right">
           <Link to="/">

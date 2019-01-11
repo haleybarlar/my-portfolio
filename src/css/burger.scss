@@ -12,6 +12,10 @@ button:focus {
   outline:none;
 }
 
+.bm-menu-wrap {
+  width: 100% !important;
+}
+
 /* Color/shape of burger icon bars */
 span.bm-burger-bars {
   background: black;
@@ -20,9 +24,15 @@ span.bm-burger-bars {
 
 /* Position and sizing of clickable cross button */
 .bm-cross-button {
-  height: 24px;
-  width: 24px;
-  display: none;
+  width: 2rem !important;
+  height: 4rem !important;
+  right: 2rem !important;
+  top: 3rem !important;
+}
+
+span.bm-cross {
+  width: 2px !important;
+  height: 2rem !important;
 }
 
 /* Color/shape of close button cross */
@@ -50,6 +60,22 @@ div.bm-item:focus {
 .bm-item-list {
   color: #b8b7ad;
   padding: 0.8em;
+  padding-top: 10rem;
+
+  a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.8rem;
+  }
+
+  p {
+    color: black;
+    font-size: 1.8rem;
+  }
+
+  p:hover, a:hover {
+    color: red;
+  }
 }
 
 /* Individual item */
@@ -60,13 +86,4 @@ div.bm-item:focus {
 /* Styling of overlay */
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
-}
-
-a {
-  text-decoration: none;
-}
-
-p {
-  color: black;
-  font-size: 1.3rem;
 }

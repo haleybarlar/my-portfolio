@@ -5,19 +5,27 @@ import '../css/burger.scss'
 
 class Burger extends Component {
 
+  state = {
+    menuOpen: false
+  }
+
+  closeMenu = () => {
+    this.setState({
+      menuOpen: false
+    })
+  }
+
   render () {
     return (
-      <Menu right>
+      <Menu right isOpen={this.state.menuOpen}>
         <div className="nav-right">
           <Link to="/">
-            <p>HOME</p>
+            <p onClick={this.closeMenu}>HOME</p>
           </Link>
           <Link to="/about">
-            <p>ABOUT</p>
+            <p onClick={this.closeMenu}>ABOUT</p>
           </Link>
-          <Link to="/contact">
-            <p>CONTACT</p>
-          </Link>
+          <a href="mailto:hbarlar1@gmail.com" target="_top">CONTACT</a>
         </div>
       </Menu>
     )
