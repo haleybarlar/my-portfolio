@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import allProjects from '../projects_data.js'
 import DevelopmentIcon from './DevelopmentIcon.js'
 import FibersIcon from './FibersIcon.js'
 import '../css/work.scss'
@@ -7,9 +6,9 @@ import '../css/work.scss'
 class Work extends Component {
 
   render() {
-    let developmentProjects = allProjects.filter(project => project.type === 'development').map(project => <DevelopmentIcon project={project}/>)
+    let developmentProjects = this.props.projects.filter(project => project.type === 'development').map(project => <DevelopmentIcon project={project} handleClick={this.props.handleClick}/>)
 
-    let fibersProjects = allProjects.filter(project => project.type === 'fibers').map(project => <FibersIcon project={project}/>)
+    let fibersProjects = this.props.projects.filter(project => project.type === 'fibers').map(project => <FibersIcon project={project} handleClick={this.props.handleClick}/>)
 
     return (
       <div className="work">
