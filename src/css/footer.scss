@@ -1,0 +1,41 @@
+.footer {
+  display: grid;
+  justify-content: center;
+  border-top: 1px solid #e0e0e0;
+  height: 17rem;
+  margin-top: 8rem;
+
+  .footer-text {
+    margin-top: 15% !important;
+    margin: 0 auto;
+    margin-right: 20%;
+    margin-left: 20%;
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 800;
+    }
+
+    p {
+      font-size: 1rem;
+      width: 100%;
+      padding-top: 2%;
+      line-height: 1.5rem;
+    }
+
+    i {
+      padding: 2rem 1rem;
+      color: black;
+      font-size: 1.2rem;
+    }
+
+    i:hover {
+      color: grey;
+    }
+
+    a {
+      font-size: 1rem;
+      padding-top: 1%;
+    }
+  }
+}
