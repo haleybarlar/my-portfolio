@@ -1,15 +1,21 @@
 import React, { Component } from 'react'
 import '../css/home.scss'
 
-class Home extends Component {
+class ShowPage extends Component {
+
+  state = {
+
+  }
 
   render() {
+    console.log(this.props.currentProject)
+
     return (
       <div className="show-page">
-        <h1>This is the show page</h1>
+        <h1>{this.props.currentProject.name}</h1>
       </div>
     )
   }
 }
 
-export default Home
+export default ShowPage

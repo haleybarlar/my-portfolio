@@ -5,8 +5,8 @@ import Footer from './components/Footer.js'
 import Home from './components/Home.js'
 import AboutPage from './components/AboutPage.js'
 import ShowPage from './components/ShowPage.js'
-import { Redirect } from 'react-router-dom'
 import allProjects from './projects_data.js'
+import { Redirect } from 'react-router-dom'
 import './App.css';
 
 class App extends Component {
@@ -14,22 +14,33 @@ class App extends Component {
   state = {
     id: "",
     clicked: false,
-    projects: allProjects
+    projects: allProjects,
+    currentProject: ""
   }
 
-  handleClick = (event) => {
+  componentDidMount() {
+    const id = JSON.parse(localStorage.getItem( "id" ))
+
+    let currentProject = this.state.projects.filter(project => project.id === id)[0]
+
+    this.setState({
+      id: id,
+      currentProject: currentProject
+    })
+
+  }
+
+  handleClick = (event, currentProject) => {
+    localStorage.setItem('id', event.target.id)
+
     this.setState({
       id: event.target.id,
-      clicked: true
+      clicked: true,
+      currentProject: currentProject
     })
   }
 
   render() {
-    console.log(this.state.id, this.state.clicked)
-
-    if (this.state.clicked) {
-      return <Redirect to={`/${this.state.id}`} />
-    }
 
     return (
       <div className="App">
@@ -37,7 +48,7 @@ class App extends Component {
         <Switch>
             <Route exact path={'/'} render={() => <Home handleClick={this.handleClick} projects={this.state.projects} />} />
             <Route exact path="/about" component={AboutPage}/>
-            <Route path={`/${this.state.id}`} component={ShowPage} />
+            <Route path={`/${this.state.id}`} render={() => <ShowPage projects={this.state.projects} currentProject={this.state.currentProject}/>} />
           </Switch>
         <Footer />
       </div>
