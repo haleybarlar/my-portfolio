@@ -27,7 +27,7 @@ class FibersIcon extends Component {
 
     return (
       <div className="container" onClick={this.handleClick}>
-        <img src={this.props.project.image} alt="" className="icon-img"/>
+        <img src={this.props.project.image[0]} alt="" className="icon-img"/>
         <div className="overlay" id ={this.props.project.id}>
           <div className="text">{this.props.project.name}</div>
         </div>

@@ -1,18 +1,29 @@
 import React, { Component } from 'react'
-import '../css/home.scss'
+import '../css/showpage.scss'
+import { Link } from "react-router-dom";
 
 class ShowPage extends Component {
 
-  state = {
-
+  componentDidMount() {
+    window.scrollTo(0, 0)
   }
 
   render() {
-    console.log(this.props.currentProject)
+
+    let images = this.props.currentProject.image.map(one => <img src={one} alt="" />)
 
     return (
       <div className="show-page">
-        <h1>{this.props.currentProject.name}</h1>
+        <div className="show-description">
+          <h1>{this.props.currentProject.name}</h1>
+          <p>{this.props.currentProject.description}</p>
+          <p>{this.props.currentProject.languages}</p>
+          {images}
+        </div>
+
+        <div className="other-projects">
+          <Link to='/'><button>go back</button></Link>
+        </div>
       </div>
     )
   }
