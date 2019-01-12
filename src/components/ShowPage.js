@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import '../css/showpage.scss'
 import { Link } from "react-router-dom";
+import YouTube from 'react-youtube';
 
 class ShowPage extends Component {
 
@@ -10,8 +11,14 @@ class ShowPage extends Component {
 
   render() {
 
-    let images = this.props.currentProject.image.map(one => <img src={one} alt="" />)
+    const opts = {
+      height: '250',
+      width: '350',
+    }
 
+    let images = (this.props.currentProject.image && this.props.currentProject.image.length > 1 ? this.props.currentProject.image.map(one => <img src={one} alt="" />) :  <div id="youtube"><YouTube videoId={this.props.currentProject.url} opts={opts}/></div>)
+
+    console.log(this.props.currentProject)
     return (
       <div className="show-page">
         <div className="show-description">
