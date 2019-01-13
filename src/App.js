@@ -17,18 +17,18 @@ class App extends Component {
     currentProject: ""
   }
 
-  componentDidMount() {
-    window.scrollTo(0, 0)
-
-    const id = JSON.parse(localStorage.getItem( "id" ))
-
-    let currentProject = this.state.projects.filter(project => project.id === id)[0]
-
-    this.setState({
-      id: id,
-      currentProject: currentProject
-    })
-  }
+  // componentDidMount() {
+  //   window.scrollTo(0, 0)
+  //
+  //   const id = JSON.parse(localStorage.getItem( "id" ))
+  //
+  //   let currentProject = this.state.projects.filter(project => project.id === id)[0]
+  //
+  //   this.setState({
+  //     id: id,
+  //     currentProject: currentProject
+  //   })
+  // }
 
   handleClick = (event, currentProject) => {
     console.log(event, currentProject)

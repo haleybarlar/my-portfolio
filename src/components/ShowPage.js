@@ -12,8 +12,8 @@ class ShowPage extends Component {
   render() {
 
     const opts = {
-      height: '250',
-      width: '350',
+      height: '80%',
+      width: '90%',
     }
 
     let images = (this.props.currentProject.image && this.props.currentProject.image.length > 1 ? this.props.currentProject.image.map(one => <img src={one} alt="" />) :  <div id="youtube"><YouTube videoId={this.props.currentProject.url} opts={opts}/></div>)

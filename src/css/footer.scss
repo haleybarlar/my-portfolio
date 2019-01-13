@@ -6,7 +6,7 @@
   margin-top: 8rem;
 
   .footer-text {
-    margin-top: 15% !important;
+    margin-top: 4rem !important;
     margin: 0 auto;
     margin-right: 20%;
     margin-left: 20%;
@@ -36,6 +36,16 @@
     a {
       font-size: 1rem;
       padding-top: 1%;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    .footer-text {
+      i {
+        font-size: 1.3rem;
+      }
     }
   }
 }
