@@ -26,9 +26,31 @@
   .navbar {
     .nav-right {
       display: inline;
+      margin-right: 4%;
+      margin-top: 3rem;
+      float: right;
+
+      a {
+        text-decoration: none;
+      }
 
       p {
         display: inline;
+        color: black;
+        font-weight: 800;
+        font-size: 0.8rem;
+      }
+
+      p:hover {
+        color: grey;
+      }
+
+      .padding {
+        padding: 0 1rem;
+      }
+
+      p#contact {
+        padding-left: 1rem;
       }
     }
   }

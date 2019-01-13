@@ -88,3 +88,23 @@
     }
   }
 }
+
+@media screen and (min-width: 992px) {
+  .show-page {
+    .other-projects {
+      .work {
+        grid-template-columns: 1fr;
+        grid-row-gap: 3rem;
+
+        .one {
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-column-gap: 3rem;
+        }
+
+        img {
+          height: 9.5rem;
+        }
+      }
+    }
+  }
+}

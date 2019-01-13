@@ -14,13 +14,13 @@ class Navbar extends Component {
         <Burger setClicked={this.props.setClicked}/>
         <div className="nav-right">
           <Link to="/">
-            <p>HOME</p>
+            <p className="padding">HOME</p>
           </Link>
           <Link to="/about">
-            <p>ABOUT</p>
+            <p className="padding">ABOUT</p>
           </Link>
           <Link to="/contact">
-            <p>CONTACT</p>
+            <p id="contact">CONTACT</p>
           </Link>
         </div>
       </div>
