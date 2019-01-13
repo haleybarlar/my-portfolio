@@ -12,11 +12,11 @@ class Work extends Component {
     return (
       <div className="work">
         <div className="one">
-          <h1>Development</h1>
+          <h1 className="title">Development</h1>
           {developmentProjects}
         </div>
         <div className="one">
-          <h1>Fibers</h1>
+          <h1 className="title">Fibers</h1>
           {fibersProjects}
         </div>
       </div>

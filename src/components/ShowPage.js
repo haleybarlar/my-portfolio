@@ -1,11 +1,15 @@
 import React, { Component } from 'react'
 import '../css/showpage.scss'
-import { Link } from "react-router-dom";
+import Work from './Work.js'
 import YouTube from 'react-youtube';
 
 class ShowPage extends Component {
 
   componentDidMount() {
+    window.scrollTo(0, 0)
+  }
+
+  componentDidUpdate() {
     window.scrollTo(0, 0)
   }
 
@@ -29,7 +33,8 @@ class ShowPage extends Component {
         </div>
 
         <div className="other-projects">
-          <Link to='/'><button>go back</button></Link>
+          <h1>Other Projects</h1>
+          <Work handleClick={this.props.handleClick} projects={this.props.projects} />
         </div>
       </div>
     )
@@ -37,3 +42,14 @@ class ShowPage extends Component {
 }
 
 export default ShowPage
+
+// <div className="show-description">
+//   <h1>{this.props.currentProject.name}</h1>
+//   <p>{this.props.currentProject.description}</p>
+//   <p>{this.props.currentProject.languages}</p>
+//   {images}
+// </div>
+//
+// <div className="other-projects">
+//   <Link to='/'><button>go back</button></Link>
+// </div>

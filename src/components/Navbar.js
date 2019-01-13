@@ -8,10 +8,10 @@ class Navbar extends Component {
   render() {
     return (
       <div className="navbar">
-        <Link to="/">
+        <Link to="/" onClick={this.props.setClicked}>
           <h1>HALEY<span>BARLAR</span></h1>
         </Link>
-        <Burger />
+        <Burger setClicked={this.props.setClicked}/>
         <div className="nav-right">
           <Link to="/">
             <p>HOME</p>

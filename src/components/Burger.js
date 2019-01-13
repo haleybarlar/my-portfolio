@@ -13,6 +13,8 @@ class Burger extends Component {
     this.setState({
       menuOpen: false
     })
+
+    this.props.setClicked()
   }
 
   render () {

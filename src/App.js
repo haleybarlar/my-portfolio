@@ -17,28 +17,16 @@ class App extends Component {
     currentProject: ""
   }
 
-  // componentDidMount() {
-  //   window.scrollTo(0, 0)
-  //
-  //   const id = JSON.parse(localStorage.getItem( "id" ))
-  //
-  //   let currentProject = this.state.projects.filter(project => project.id === id)[0]
-  //
-  //   this.setState({
-  //     id: id,
-  //     currentProject: currentProject
-  //   })
-  // }
-
-  handleClick = (event, currentProject) => {
-    console.log(event, currentProject)
-
-    localStorage.setItem('id', event.target.id)
-
+  handleClick = (id, currentProject) => {
     this.setState({
-      id: event.target.id,
-      clicked: true,
-      currentProject: currentProject
+      currentProject,
+      clicked: true
+    })
+  }
+
+  setClicked = () => {
+    this.setState({
+      clicked: false
     })
   }
 
@@ -46,11 +34,13 @@ class App extends Component {
 
     return (
       <div className="App">
-        <Navbar />
+        <Navbar setClicked={this.setClicked}/>
         <Switch>
-            <Route exact path={'/'} render={() => <Home handleClick={this.handleClick} projects={this.state.projects} />} />
+            {!this.state.clicked ? <Route exact path={'/'} render={() => <Home handleClick={this.handleClick} projects={this.state.projects} />} />
+          :
+          <Route exact path={'/'} render={() => <ShowPage setClicked={this.setClicked} currentProject={this.state.currentProject} handleClick={this.handleClick} projects={this.state.projects}/>} />
+         }
             <Route exact path="/about" component={AboutPage}/>
-            <Route path={`/${this.state.id}`} render={() => <ShowPage projects={this.state.projects} currentProject={this.state.currentProject} handleClick={this.handleClick}/>} />
           </Switch>
         <Footer />
       </div>
