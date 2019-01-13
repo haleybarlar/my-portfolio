@@ -22,7 +22,6 @@ class ShowPage extends Component {
 
     let images = (this.props.currentProject.image && this.props.currentProject.image.length > 1 ? this.props.currentProject.image.map(one => <img src={one} alt="" />) :  <div id="youtube"><YouTube videoId={this.props.currentProject.url} opts={opts}/></div>)
 
-    console.log(this.props.currentProject)
     return (
       <div className="show-page">
         <div className="show-description">
