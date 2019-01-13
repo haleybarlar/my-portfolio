@@ -16,7 +16,7 @@ class ShowPage extends Component {
   render() {
 
     const opts = {
-      height: 'auto',
+      height: '600',
       width: '100%',
     }
 

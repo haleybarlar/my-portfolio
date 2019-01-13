@@ -1,3 +1,12 @@
 .home {
   margin-top: 11rem;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
+@media screen and (min-width: 1170px) {
+  .home {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
 }
