@@ -21,7 +21,7 @@
   width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background-color: #008CBA;
+  background-color: #f8baa7;
 }
 
 .container:hover{
@@ -45,8 +45,19 @@
 }
 
 @media screen and (min-width: 768px) {
-  .icon-img {
-    height: 12rem;
-    object-fit: cover;
+  .work {
+    .icon-img {
+      height: 12rem;
+      object-fit: cover;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .work {
+    .icon-img {
+      height: 17rem;
+      object-fit: cover;
+    }
   }
 }

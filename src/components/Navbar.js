@@ -9,7 +9,7 @@ class Navbar extends Component {
     return (
       <div className="navbar">
         <Link to="/" onClick={this.props.setClicked}>
-          <h1>HALEY<span>BARLAR</span></h1>
+          <h1>HB<span></span></h1>
         </Link>
         <Burger setClicked={this.props.setClicked}/>
         <div className="nav-right">
@@ -19,9 +19,7 @@ class Navbar extends Component {
           <Link to="/about">
             <p className="padding">ABOUT</p>
           </Link>
-          <Link to="/contact">
-            <p id="contact">CONTACT</p>
-          </Link>
+          <a href="mailto:hbarlar1@gmail.com" target="_top"><p id="contact">CONTACT</p></a>
         </div>
       </div>
     )
