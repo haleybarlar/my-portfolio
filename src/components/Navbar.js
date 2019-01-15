@@ -9,7 +9,7 @@ class Navbar extends Component {
     return (
       <div className="navbar">
         <Link to="/" onClick={this.props.setClicked}>
-          <h1>HB<span></span></h1>
+          <h1>HB</h1>
         </Link>
         <Burger setClicked={this.props.setClicked}/>
         <div className="nav-right">
