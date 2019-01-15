@@ -2,8 +2,8 @@ const projects = [
   {
     id: 1,
     name: 'Mindful Todo',
-    description: "This was a response to having an overload of information floating around in my head.  I wanted to create something that would allow me to remove my thoughts and clear the clutter in order to be more productive and use that energy wisely.  It's a place to put your thoughts out and assess what you need to do one step at a time.",
-    languages: "I used a Rails backend with a React and Redux frontend with CSS and Sass for design.",
+    description: "TLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    languages: "Rails, React, Redux, Semantic UI, CSS",
     image: ['./mindful.png'],
     type: 'development',
     url: 'E56WZI8JLus'
@@ -11,8 +11,8 @@ const projects = [
   {
     id: 2,
     name: 'Yoga Cycle',
-    description: "This is an app for yoga teachers and students to create classes.",
-    languages: "I used a Rails backend with a React frontend with CSS and Semantic UI for design.",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    languages: "Rails, React, Semantic UI, CSS",
     image: ['./yogaCycle.png'],
     type: 'development',
     url: '9ifvJ7KDRew'
@@ -20,8 +20,8 @@ const projects = [
   {
     id: 3,
     name: 'Daily Harvest Master Copy',
-    description: "This is a master copy of Daily Harvest's app.",
-    languages: "Created using pure CSS and Sass",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    languages: "CSS and SASS",
     image: ['./DH.png'],
     type: 'development',
     url: '33l5KXXuHs0'
