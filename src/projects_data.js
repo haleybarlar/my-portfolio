@@ -2,7 +2,7 @@ const projects = [
   {
     id: 1,
     name: 'Mindful Todo',
-    description: "This was a response to my brain being filled with clutter. I was constantly thinking about what I needed to do, ideas for apps, places I wanted to go, it was an endless churning of ideas.  Eventually I realized that if I could just get the clutter out, I'd be able to be more productive and use that energy for a greater purpose.  So I created Mindful Todo: the place to put your thoughts.  Somewhere you could keep track of everything you were thinking and lock it away until you were ready to see it again.  Completed tasks and lists were recorded to create a sense of responsibilty and reward.",
+    description: "This was a response to my brain being filled with clutter. I was constantly thinking about what I needed to do, ideas for apps, places I wanted to go, it was an endless cycle of ideas.  Eventually I realized that if I could just get the clutter out, I'd be able to be more productive and use that energy for a greater purpose.  So I created Mindful Todo: the place to put your thoughts.  Somewhere you could keep track of everything you were thinking and lock it away until you were ready to see it again.  Completed tasks and lists were recorded to create a sense of responsibilty and reward.",
     languages: "Rails, React, Redux, Semantic UI and CSS",
     image: ['./mindful.png'],
     type: 'development',

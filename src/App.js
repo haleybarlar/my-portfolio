@@ -17,6 +17,13 @@ class App extends Component {
     currentProject: ""
   }
 
+  componentDidMount() {
+    this.setState({
+      clicked: false
+    })
+    window.scrollTo(0, 0)
+  }
+
   handleClick = (id, currentProject) => {
     this.setState({
       currentProject,

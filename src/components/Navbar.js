@@ -14,7 +14,7 @@ class Navbar extends Component {
         <Burger setClicked={this.props.setClicked}/>
         <div className="nav-right">
           <Link to="/">
-            <p className="padding">HOME</p>
+            <p className="padding" onClick={this.props.setClicked}>HOME</p>
           </Link>
           <Link to="/about">
             <p className="padding">ABOUT</p>
