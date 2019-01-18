@@ -3,8 +3,37 @@
   margin-left: 4%;
   margin-right: 4%;
 
+  .show-description {
+    p, h1 {
+      text-align: left;
+    }
+
+    p {
+      line-height: 2rem;
+      text-align: left;
+      font-size: 1.2rem;
+    }
+
+    h1 {
+      font-weight: 800;
+      font-size: 2rem;
+    }
+
+    #show-p {
+      margin-top: 1rem;
+    }
+  }
+
+  #show-imgs {
+    margin-top: 2rem;
+
+    img {
+      width: 100%;
+    }
+  }
+
   .other-projects {
-    margin-top: 14rem;
+    margin-top: 5rem;
 
     .work {
       margin-left: 0;
@@ -91,6 +120,16 @@
 
 @media screen and (min-width: 992px) {
   .show-page {
+    .show-description {
+      p, h1 {
+        text-align: left;
+      }
+
+      #show-p {
+        margin-top: 1rem;
+      }
+    }
+
     .other-projects {
       .work {
         grid-template-columns: 1fr;

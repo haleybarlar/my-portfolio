@@ -25,10 +25,15 @@ class ShowPage extends Component {
     return (
       <div className="show-page">
         <div className="show-description">
-          <h1>{this.props.currentProject.name}test</h1>
-          <p>{this.props.currentProject.description}</p>
-          <p>{this.props.currentProject.languages}</p>
-          {images}
+          <h1>{this.props.currentProject.name}</h1>
+
+          <div id="show-imgs">
+            {images}
+          </div>
+          <div id="show-p">
+            <p>{this.props.currentProject.description}</p>
+            <p>Created using {this.props.currentProject.languages}.</p>
+          </div>
         </div>
 
         <div className="other-projects">
