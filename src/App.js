@@ -43,10 +43,8 @@ class App extends Component {
       <div className="App">
         <Navbar setClicked={this.setClicked}/>
         <Switch>
-            {!this.state.clicked ? <Route exact path={'/'} render={() => <Home handleClick={this.handleClick} projects={this.state.projects} />} />
-          :
-          <Route exact path={'/'} render={() => <ShowPage setClicked={this.setClicked} currentProject={this.state.currentProject} handleClick={this.handleClick} projects={this.state.projects}/>} />
-         }
+            <Route exact path={'/'} render={() => <Home handleClick={this.handleClick} projects={this.state.projects} />} />
+          <Route path={'/project'} render={() => <ShowPage setClicked={this.setClicked} currentProject={this.state.currentProject} handleClick={this.handleClick} projects={this.state.projects}/>} />
             <Route exact path="/about" component={AboutPage}/>
           </Switch>
         <Footer />
