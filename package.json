@@ -15,7 +15,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "/Users/haleybarlar/.nvm/versions/node/v6.11.2/lib/node_modules/node/lib/node_modules/surge/lib/cli.js"
   },
   "eslintConfig": {
     "extends": "react-app"
