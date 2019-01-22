@@ -20,7 +20,7 @@ class ShowPage extends Component {
       width: '100%',
     }
 
-    let images = (this.props.currentProject.image && this.props.currentProject.image.length > 1 ? this.props.currentProject.image.map(one => <img src={one} alt="" />) :  <div id="youtube"><YouTube videoId={this.props.currentProject.url} opts={opts}/></div>)
+    let images = (this.props.currentProject.image && this.props.currentProject.image.length > 1 ? this.props.currentProject.image.map(one => <img src={one} alt="" />) : <div id="youtube"><YouTube videoId={this.props.currentProject.url} opts={opts}/></div>)
 
     return (
       <div className="show-page">
@@ -38,7 +38,7 @@ class ShowPage extends Component {
 
         <div className="other-projects">
           <h1>Other Projects</h1>
-          <Work handleClick={this.props.handleClick} projects={this.props.projects} />
+          <Work handleClick={this.props.handleClick} projects={this.props.projects} page={this.props.page}/>
         </div>
       </div>
     )
@@ -46,14 +46,3 @@ class ShowPage extends Component {
 }
 
 export default ShowPage
-
-// <div className="show-description">
-//   <h1>{this.props.currentProject.name}</h1>
-//   <p>{this.props.currentProject.description}</p>
-//   <p>{this.props.currentProject.languages}</p>
-//   {images}
-// </div>
-//
-// <div className="other-projects">
-//   <Link to='/'><button>go back</button></Link>
-// </div>

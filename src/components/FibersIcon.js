@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import '../css/WorkIcon.scss'
-import { Redirect } from 'react-router-dom'
+import { Redirect, withRouter } from 'react-router-dom'
 
 class FibersIcon extends Component {
 
@@ -10,18 +10,30 @@ class FibersIcon extends Component {
   }
 
   handleClick = (event) => {
+
     let id = event.target.id
 
     let currentProject = this.props.project
 
-    this.setState({
-      clicked: true
-    })
+    if (this.props.location.pathname !== '/project') {
+      this.setState({
+        clicked: true
+      })
+    } else {
+      this.setState({
+        clicked: false
+      })
+    }
+
+
+    console.log(id, currentProject)
 
     this.props.handleClick(id, currentProject)
   }
 
   render() {
+
+    console.log(this.props.location.pathname)
 
     if (this.state.clicked) {
       return <Redirect to='/project'/>
@@ -38,4 +50,4 @@ class FibersIcon extends Component {
   }
 }
 
-export default FibersIcon
+export default withRouter(FibersIcon)

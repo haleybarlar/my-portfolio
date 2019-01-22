@@ -14,7 +14,8 @@ class App extends Component {
     id: "",
     clicked: false,
     projects: allProjects,
-    currentProject: ""
+    currentProject: "",
+    page: ""
   }
 
   componentDidMount() {
@@ -27,7 +28,8 @@ class App extends Component {
   handleClick = (id, currentProject) => {
     this.setState({
       currentProject,
-      clicked: true
+      clicked: true,
+      page: 'project'
     })
   }
 
@@ -43,8 +45,8 @@ class App extends Component {
       <div className="App">
         <Navbar setClicked={this.setClicked}/>
         <Switch>
-            <Route exact path={'/'} render={() => <Home handleClick={this.handleClick} projects={this.state.projects} />} />
-          <Route path={'/project'} render={() => <ShowPage setClicked={this.setClicked} currentProject={this.state.currentProject} handleClick={this.handleClick} projects={this.state.projects}/>} />
+            <Route exact path={'/'} render={() => <Home handleClick={this.handleClick} projects={this.state.projects} page={this.state.page}/>} />
+            <Route path={'/project'} render={() => <ShowPage setClicked={this.setClicked} currentProject={this.state.currentProject} handleClick={this.handleClick} projects={this.state.projects} page={this.state.page}/>} />
             <Route exact path="/about" component={AboutPage}/>
           </Switch>
         <Footer />
@@ -53,4 +55,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App
