@@ -36,7 +36,11 @@
     a {
       font-size: 1rem;
       padding-top: 1%;
-      color: #f0abae;
+      color: black;
+    }
+
+    a:hover {
+      color: grey;
     }
   }
 }

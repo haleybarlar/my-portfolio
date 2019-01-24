@@ -12,14 +12,22 @@ class Burger extends Component {
   closeMenu = () => {
     this.setState({
       menuOpen: false
-    })
-
+    }, () => this.props.isMenuOpen(false))
     this.props.setClicked()
+  }
+
+  handleStateChange = (state) => {
+    this.setState({menuOpen: state.isOpen})
+    this.props.isMenuOpen(!this.state.menuOpen)
   }
 
   render () {
     return (
-      <Menu right isOpen={this.state.menuOpen}>
+      <Menu
+          right
+          isOpen={this.state.menuOpen}
+          onStateChange={(state) => this.handleStateChange(state)}
+        >
         <div className="nav-right">
           <Link to="/">
             <p onClick={this.closeMenu}>HOME</p>
@@ -27,7 +35,7 @@ class Burger extends Component {
           <Link to="/about">
             <p onClick={this.closeMenu}>ABOUT</p>
           </Link>
-          <a href="mailto:hbarlar1@gmail.com" target="_top">CONTACT</a>
+          <a href="mailto:hbarlar1@gmail.com" target="_top"><p id="contact">CONTACT</p></a>
         </div>
       </Menu>
     )

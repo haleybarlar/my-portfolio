@@ -5,13 +5,25 @@ import Burger from './Burger.js'
 
 class Navbar extends Component {
 
+  state = {
+    isMenuOpen: false
+  }
+
+  isMenuOpen = (boo) => {
+    this.setState({
+      isMenuOpen: boo
+    })
+  }
+
   render() {
+    console.log(this.state.isMenuOpen)
+
     return (
-      <div className="navbar">
+      <div className="navbar" style={{ height: this.state.isMenuOpen ? '100%' : null}}>
         <Link to="/" onClick={this.props.setClicked}>
           <h1>HB</h1>
         </Link>
-        <Burger setClicked={this.props.setClicked}/>
+        <Burger setClicked={this.props.setClicked} isMenuOpen={this.isMenuOpen}/>
         <div className="nav-right">
           <Link to="/">
             <p className="padding" onClick={this.props.setClicked}>HOME</p>
@@ -27,3 +39,5 @@ class Navbar extends Component {
 }
 
 export default Navbar
+
+// style={{ height: !this.state.isMenuOpen ? '100%' : null}}

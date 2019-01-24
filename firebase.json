@@ -10,6 +10,12 @@
     "source": "/about",
     "destination": "https://haleybarlar.com/",
     "type": 302
-    }]
+    },
+    {
+    "source": "/projects",
+    "destination": "https://haleybarlar.com/",
+    "type": 302
+    }
+  ]
   }
 }
