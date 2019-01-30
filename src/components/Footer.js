@@ -11,9 +11,9 @@ class Footer extends Component {
           <p>Get in touch for any full-time opportunities or a quick hello!</p>
           <a href="mailto:hbarlar1@gmail.com" target="_top">hbarlar1@gmail.com</a>
           <br></br>
-          <a href="https://github.com/haleybarlar" alt=""><i class="fa fa-github" aria-hidden="true"></i></a>
-          <a href="https://www.linkedin.com/in/haleybarlar/" alt=""><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-          <a href="https://www.behance.net/haleybarlar" alt=""><i class="fa fa-behance" aria-hidden="true"></i></a>
+          <a href="https://github.com/haleybarlar" alt="" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+          <a href="https://www.linkedin.com/in/haleybarlar/" alt="" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+          <a href="https://www.behance.net/haleybarlar" alt="" target="_blank"><i class="fa fa-behance" aria-hidden="true"></i></a>
         </div>
       </div>
     )

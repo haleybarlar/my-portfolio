@@ -31,6 +31,7 @@ class Navbar extends Component {
           <Link to="/about">
             <p className="padding">ABOUT</p>
           </Link>
+          <a href="https://drive.google.com/open?id=1Dumj7Ak7axK3NAB5G4LeLGMG52ipe3lb" alt="" target="_blank"><p className="padding">RÉSUMÉ</p></a>
           <a href="mailto:hbarlar1@gmail.com" target="_top"><p id="contact">CONTACT</p></a>
         </div>
       </div>
@@ -39,5 +40,3 @@ class Navbar extends Component {
 }
 
 export default Navbar
-
-// style={{ height: !this.state.isMenuOpen ? '100%' : null}}
