@@ -35,6 +35,7 @@ class Burger extends Component {
           <Link to="/about">
             <p onClick={this.closeMenu}>ABOUT</p>
           </Link>
+          <a href="https://drive.google.com/file/d/1qlyEbCTcd069ERRvsrNUnuXsQ2Fq66cC/view?usp=sharing" alt="" target="_blank"><p>RÉSUMÉ</p></a>
           <a href="mailto:hbarlar1@gmail.com" target="_top"><p id="contact">CONTACT</p></a>
         </div>
       </Menu>
