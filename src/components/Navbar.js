@@ -29,7 +29,7 @@ class Navbar extends Component {
           <Link to="/about">
             <p className="padding">ABOUT</p>
           </Link>
-          <a href="https://drive.google.com/file/d/1qlyEbCTcd069ERRvsrNUnuXsQ2Fq66cC/view?usp=sharing" alt="" target="_blank"><p className="padding">RÉSUMÉ</p></a>
+          <a href="https://drive.google.com/file/d/1ashNYOudektyfoCFpPiZhM5iTWzpF7PR/view?usp=sharing" alt="" target="_blank"><p className="padding">RÉSUMÉ</p></a>
           <a href="mailto:hbarlar1@gmail.com" target="_top"><p id="contact">CONTACT</p></a>
         </div>
       </div>
