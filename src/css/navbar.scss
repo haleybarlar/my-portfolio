@@ -29,6 +29,10 @@
     position: relative;
     z-index: 1;
   }
+
+  button:hover {
+    cursor: pointer;
+  }
   
   i {
     font-size: 30px;

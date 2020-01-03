@@ -33,14 +33,14 @@ class Navbar extends Component {
 
     return (
       <div className="navbar" style={{ height: this.state.isMenuOpen ? '100%' : null}}>
-        <Link to="/" onClick={this.props.setClicked}>
+        <Link to="/" onClick={this.props.setClicked} aria-label="Home">
           <h1>HB</h1>
         </Link>
         <button onClick={this.isMenuOpen} ref={this.ref}>
           {this.state.isMenuOpen ? 
             <i class="material-icons">close</i>
           : 
-            <i class="material-icons">view_headline</i>
+            <i class="material-icons" aria-label="navigation menu">view_headline</i>
           }
         </button>
         {this.state.isMenuOpen ?  <HomemadeBurger closeMenu={this.closeMenu} /> : null}
