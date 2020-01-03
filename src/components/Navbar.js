@@ -1,27 +1,49 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom"
 import '../css/navbar.scss'
-import Burger from './Burger.js'
+import HomemadeBurger from './HomemadeBurger.js'
+// import "wicg-inert"
+
 
 class Navbar extends Component {
+  constructor(props) {
+    super(props)
 
-  state = {
-    isMenuOpen: false
+    this.state = {
+      isMenuOpen: false,
+    }
+
+    this.ref = React.createRef()
   }
 
-  isMenuOpen = (boo) => {
+  isMenuOpen = () => {
     this.setState({
-      isMenuOpen: boo
+      isMenuOpen: !this.state.isMenuOpen
+    })
+  }
+
+  closeMenu = (e) => {
+    this.ref.current.focus()
+    this.setState({
+      isMenuOpen: false
     })
   }
 
   render() {
+
     return (
       <div className="navbar" style={{ height: this.state.isMenuOpen ? '100%' : null}}>
         <Link to="/" onClick={this.props.setClicked}>
           <h1>HB</h1>
         </Link>
-        <Burger setClicked={this.props.setClicked} isMenuOpen={this.isMenuOpen}/>
+        <button onClick={this.isMenuOpen} ref={this.ref}>
+          {this.state.isMenuOpen ? 
+            <i class="material-icons">close</i>
+          : 
+            <i class="material-icons">view_headline</i>
+          }
+        </button>
+        {this.state.isMenuOpen ?  <HomemadeBurger closeMenu={this.closeMenu} /> : null}
         <div className="nav-right">
           <Link to="/">
             <p className="padding" onClick={this.props.setClicked}>HOME</p>

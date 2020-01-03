@@ -20,10 +20,29 @@
   .nav-right {
     display: none;
   }
+
+  button {
+    border: none; 
+    float: right;
+    margin-top: 3rem;
+    margin-right: 4%;
+    position: relative;
+    z-index: 1;
+  }
+  
+  i {
+    font-size: 30px;
+  }
 }
 
 @media screen and (min-width: 992px) {
   .navbar {
+    height: 6rem !important;
+
+    button {
+      display: none;
+    }
+    
     .nav-right {
       display: inline;
       margin-right: 4%;

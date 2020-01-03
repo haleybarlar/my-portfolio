@@ -25,15 +25,10 @@ class FibersIcon extends Component {
       })
     }
 
-
-    console.log(id, currentProject)
-
     this.props.handleClick(id, currentProject)
   }
 
   render() {
-
-    console.log(this.props.location.pathname)
 
     if (this.state.clicked) {
       return <Redirect to='/project'/>

@@ -1,0 +1,30 @@
+.homemade-burger {
+    height: 100%;
+    width: 100%;
+    background: white;
+    position: absolute;
+    padding-top: 10rem;
+
+    a {
+        text-decoration: none;
+        color: black;
+        font-size: 1.8rem;
+    }
+    
+    p {
+        color: black;
+        font-size: 1.8rem;
+        display: inline;
+    }
+    
+    p:hover, a:hover {
+        color: #744E4E;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .homemade-burger {
+        display: none;
+    }
+}
+
