@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, withRouter } from "react-router-dom";
 import Navbar from './components/Navbar.js'
 import Footer from './components/Footer.js'
 import Home from './components/Home.js'
@@ -16,7 +16,8 @@ class App extends Component {
     clicked: false,
     projects: allProjects,
     currentProject: "",
-    page: ""
+    page: "",
+    focusMe: false
   }
 
   componentDidMount() {
@@ -24,6 +25,15 @@ class App extends Component {
       clicked: false
     })
     window.scrollTo(0, 0)
+
+    // persist on refresh
+    if (this.props.location.pathname.split('/')[1] === 'project') {
+      const currentProject = this.state.projects
+        .filter(project => project.id == this.props.location.pathname.split('/')[2])[0]
+      this.setState({
+        currentProject
+      })
+    }
   }
 
   handleClick = (id, currentProject) => {
@@ -46,8 +56,22 @@ class App extends Component {
       <div className="App">
         <Navbar setClicked={this.setClicked}/>
         <Switch>
-            <Route exact path={'/'} render={() => <Home handleClick={this.handleClick} projects={this.state.projects} page={this.state.page}/>} />
-            <Route path={'/project'} render={() => <ShowPage setClicked={this.setClicked} currentProject={this.state.currentProject} handleClick={this.handleClick} projects={this.state.projects} page={this.state.page}/>} />
+            <Route exact path={'/'} render={() => 
+              <Home 
+                handleClick={this.handleClick} 
+                projects={this.state.projects} 
+                page={this.state.page}
+              />
+            }/>
+            <Route path={`/project/${this.state.currentProject.id}`} render={() => 
+              <ShowPage 
+                setClicked={this.setClicked} 
+                currentProject={this.state.currentProject} 
+                handleClick={this.handleClick} 
+                projects={this.state.projects} 
+                page={this.state.page}
+              />
+            }/>
             <Route exact path="/about" component={AboutPage}/>
             <Route exact path="/contact" component={Contact}/>
           </Switch>
@@ -57,4 +81,4 @@ class App extends Component {
   }
 }
 
-export default App
+export default withRouter(App)

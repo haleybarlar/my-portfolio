@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import '../css/WorkIcon.scss'
-import { Redirect, withRouter } from 'react-router-dom'
+import { Redirect, withRouter, Link } from 'react-router-dom'
 
 class FibersIcon extends Component {
 
@@ -10,14 +10,13 @@ class FibersIcon extends Component {
   }
 
   handleClick = (event) => {
-
     let id = event.target.id
-
     let currentProject = this.props.project
 
-    if (this.props.location.pathname !== '/project') {
+    if (this.props.location.pathname.split('/')[1] !== '/project') {
       this.setState({
-        clicked: true
+        clicked: true,
+        id
       })
     } else {
       this.setState({
@@ -29,18 +28,12 @@ class FibersIcon extends Component {
   }
 
   render() {
-
-    if (this.state.clicked) {
-      return <Redirect to='/project'/>
-    }
+    const currentProject = this.props.project
 
     return (
-      <div className="container" onClick={this.handleClick}>
-        <img src={this.props.project.image[0]} alt="" className="icon-img"/>
-        <div className="overlay" id ={this.props.project.id}>
-          <div className="text">{this.props.project.name}</div>
-        </div>
-      </div>
+      <Link to={`/project/${currentProject.id}`} onClick={this.handleClick} aria-label={currentProject.label}>
+        <img src={currentProject.image[0]} alt={currentProject.name} className="icon-img"/>
+      </Link>
     )
   }
 }

@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import { Link } from "react-router-dom"
 import '../css/navbar.scss'
 import HomemadeBurger from './HomemadeBurger.js'
-// import "wicg-inert"
-
 
 class Navbar extends Component {
   constructor(props) {
@@ -14,6 +12,12 @@ class Navbar extends Component {
     }
 
     this.ref = React.createRef()
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps !== this.props) {
+      document.getElementById("myTextField").focus()
+    }
   }
 
   isMenuOpen = () => {
@@ -29,18 +33,18 @@ class Navbar extends Component {
     })
   }
 
-  render() {
 
+  render() {
     return (
       <div className="navbar" style={{ height: this.state.isMenuOpen ? '100%' : null}}>
-        <Link to="/" onClick={this.props.setClicked} aria-label="Home">
+        <Link to="/" onClick={this.props.setClicked} aria-label="Home" id="myTextField">
           <h1>HB</h1>
         </Link>
-        <button onClick={this.isMenuOpen} ref={this.ref}>
+        <button onClick={this.isMenuOpen}>
           {this.state.isMenuOpen ? 
-            <i class="material-icons">close</i>
+            <i class="material-icons" ref={this.ref}>close</i>
           : 
-            <i class="material-icons" aria-label="navigation menu">view_headline</i>
+            <i class="material-icons" aria-label="navigation menu" ref={this.ref}>view_headline</i>
           }
         </button>
         {this.state.isMenuOpen ?  <HomemadeBurger closeMenu={this.closeMenu} /> : null}
