@@ -1,5 +1,5 @@
 ## My Portfolio
-Hello! Welcome to my portfolio. It was created using React, CSS and SASS and hosted on Firebase. Please enjoy!
+Hello! Welcome to my portfolio. It was created using React, CSS and SASS and hosted on Firebase. I am happy to receive feedback or suggestions, so please feel free to open an issue if you'd like to contribute! 
 
 ## To start
 1. npm i
