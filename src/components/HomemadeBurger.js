@@ -8,18 +8,18 @@ class HomemadeBurger extends Component {
     return (
         <div className="homemade-burger">
             <Link to="/" onKeyDown={(e) => e.key === 13 && this.props.closeMenu} onClick={this.props.closeMenu}>
-                <p>HOME</p>
+                <p>work</p>
             </Link><br/>
             <Link to="/about" onKeyDown={(e) => e.key === 13 && this.props.closeMenu} onClick={this.props.closeMenu}>
-                <p>ABOUT</p>
+                <p>about</p>
             </Link><br/>
             <a 
                 href="https://drive.google.com/file/d/1ashNYOudektyfoCFpPiZhM5iTWzpF7PR/view?usp=sharing" 
                 alt="" 
             >
-                <p>RÉSUMÉ</p>
+                <p>resume</p>
             </a><br/>
-            <a href="mailto:hbarlar1@gmail.com" target="_top"><p id="contact">CONTACT</p></a>
+            <a href="mailto:hbarlar1@gmail.com" target="_top"><p id="contact">contact</p></a>
         </div>
     )
   }
