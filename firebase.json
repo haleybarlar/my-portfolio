@@ -12,7 +12,7 @@
     "type": 302
     },
     {
-    "source": "/projects",
+    "source": "/project/*",
     "destination": "https://haleybarlar.com/",
     "type": 302
     }
