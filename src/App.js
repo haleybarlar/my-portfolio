@@ -7,7 +7,7 @@ import AboutPage from './components/AboutPage.js'
 import ShowPage from './components/ShowPage.js'
 import Contact from './components/Contact.js'
 import allProjects from './projects_data.js'
-import './App.css';
+import './App.css'
 
 class App extends Component {
 
@@ -17,7 +17,8 @@ class App extends Component {
     projects: allProjects,
     currentProject: "",
     page: "",
-    focusMe: false
+    focusMe: false,
+    menuOpen: false
   }
 
   componentDidMount() {
@@ -50,11 +51,22 @@ class App extends Component {
     })
   }
 
-  render() {
+  menuOpen = () => {
+    this.setState({
+      menuOpen: true
+    })
+  }
 
+  menuClose = () => {
+    this.setState({
+      menuOpen: false
+    })
+  }
+
+  render() {
     return (
-      <div className="App">
-        <Navbar setClicked={this.setClicked}/>
+      <div className={`${App} ${this.state.menuOpen ? 'stopScoll' : 'startScroll'}`}>
+        <Navbar setClicked={this.setClicked} menuOpen={this.menuOpen} menuClose={this.menuClose}/>
         <Switch>
             <Route exact path={'/'} render={() => 
               <Home 

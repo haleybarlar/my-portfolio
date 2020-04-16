@@ -24,6 +24,8 @@ class Navbar extends Component {
     this.setState({
       isMenuOpen: !this.state.isMenuOpen
     })
+
+    this.props.menuOpen()
   }
 
   closeMenu = (e) => {
@@ -31,12 +33,14 @@ class Navbar extends Component {
     this.setState({
       isMenuOpen: false
     })
+
+    this.props.menuClose()
   }
 
 
   render() {
     return (
-      <div className="navbar" style={{ height: this.state.isMenuOpen ? '100%' : null}}>
+      <nav className="navbar" style={{ height: this.state.isMenuOpen ? '100%' : null}}>
         {/* <Link to="/" onClick={this.props.setClicked} aria-label="Home" id="myTextField">
           <h1>hb</h1>
         </Link>
@@ -70,11 +74,11 @@ class Navbar extends Component {
           {this.state.isMenuOpen ? 
             <i class="material-icons" ref={this.ref}>close</i>
           : 
-            <i class="material-icons" aria-label="navigation menu" ref={this.ref}>view_headline</i>
+            <i class="material-icons" ref={this.ref}>view_headline</i>
           }
         </button>
         {this.state.isMenuOpen && <HomemadeBurger closeMenu={this.closeMenu} />}
-      </div>
+      </nav>
     )
   }
 }

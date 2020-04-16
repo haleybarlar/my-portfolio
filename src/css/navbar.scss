@@ -18,6 +18,8 @@
   button {
     border: none;
     background: none;
+    position: relative;
+    z-index: 1;
 
     i {
       font-size: 110px;
