@@ -12,6 +12,14 @@ html {
   margin-top: 38px;
 }
 
+.stopScroll {
+  overflow: hidden;
+}
+
+.startScroll {
+  overflow: scroll;
+}
+
 @media (min-width: 768px) {
   html {
     margin: 100px 100px;

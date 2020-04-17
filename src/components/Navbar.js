@@ -17,6 +17,10 @@ class Navbar extends Component {
   isMenuOpen = () => {
     this.setState({
       isMenuOpen: !this.state.isMenuOpen
+    }, () => {
+      const bodyClasses = document.querySelector('body').classList
+      
+      this.state.isMenuOpen ? bodyClasses.add('stopScroll') : bodyClasses.add('startScroll')
     })
   }
 
@@ -26,7 +30,6 @@ class Navbar extends Component {
       isMenuOpen: false
     })
   }
-
 
   render() {
     return (

@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import { Link } from "react-router-dom";
+import React from 'react'
+import { Link } from "react-router-dom"
 import '../css/homemadeburger.scss'
  
-export default function HomemadeBurger () {
+export default function HomemadeBurger (props) {
     return (
         <div className="homemade-burger">
-            <Link to="/" onKeyDown={(e) => e.key === 13 && this.props.closeMenu} onClick={this.props.closeMenu}>
+            <Link to="/" onKeyDown={(e) => e.key === 13 && props.closeMenu} onClick={props.closeMenu}>
                 <p>work</p>
             </Link><br/>
-            <Link to="/about" onKeyDown={(e) => e.key === 13 && this.props.closeMenu} onClick={this.props.closeMenu}>
+            <Link to="/about" onKeyDown={(e) => e.key === 13 && props.closeMenu} onClick={props.closeMenu}>
                 <p>about</p>
             </Link><br/>
             <a 
