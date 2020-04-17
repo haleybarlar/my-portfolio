@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import '../css/homemadeburger.scss'
-
-class HomemadeBurger extends Component {
-
-  render () {
+ 
+export default function HomemadeBurger () {
     return (
         <div className="homemade-burger">
             <Link to="/" onKeyDown={(e) => e.key === 13 && this.props.closeMenu} onClick={this.props.closeMenu}>
@@ -22,6 +20,4 @@ class HomemadeBurger extends Component {
             <a href="mailto:hbarlar1@gmail.com" target="_top"><p id="contact">contact</p></a>
         </div>
     )
-  }
 }
-export default HomemadeBurger

@@ -50,6 +50,16 @@
   }
 }
 
+@media (min-width: 768px) {
+  .home {
+    .main {
+      .get-excited {
+        margin: 0;
+      }
+    }
+  }
+}
+
 @media (min-width: 1080px) {
   .home {
     .main {
