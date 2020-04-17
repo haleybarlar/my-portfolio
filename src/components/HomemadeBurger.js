@@ -24,5 +24,4 @@ class HomemadeBurger extends Component {
     )
   }
 }
-
 export default HomemadeBurger
