@@ -15,18 +15,18 @@
     font-size: 96px;
   }
 
-  button {
+  .hamburger-button {
     border: none;
     background: none;
     position: relative;
-    z-index: 1;
+    z-index: 2;
 
     i {
       font-size: 110px;
     }
   }
 
-  button:hover {
+  .hamburger-button:hover {
     cursor: pointer;
   }
 }
@@ -37,21 +37,31 @@
       display: flex;
       align-items: center;
 
-      a {
+      .activeLink {
+        font-weight: bold;
+      }
+
+      button.link {
+        background: none;
+        border: none;
+      }
+
+      .link {
         padding-right: 44px;
         font-size: 24px;
       }
 
-      a:last-child {
+      .link:last-child {
         padding-right: 0;
       }
 
-      a:hover {
+      .link:hover {
         text-decoration: underline;
+        cursor: pointer;
       }
     }
 
-    button {
+    .hamburger-button {
       display: none;
     }
   }

@@ -9,6 +9,7 @@ class Navbar extends Component {
 
     this.state = {
       isMenuOpen: false,
+      activeLink: ''
     }
 
     this.ref = React.createRef()
@@ -24,31 +25,50 @@ class Navbar extends Component {
     })
   }
 
-  closeMenu = (e) => {
+  closeMenu = () => {
     this.ref.current.focus()
     this.setState({
       isMenuOpen: false
     })
   }
 
+  setActive = (arg) => {
+    this.setState({
+      activeLink: arg
+    })
+  }
+
   render() {
+    const { activeLink } = this.state
+
+    const navLinks = <>
+      <Link to='/work' onClick={() => {this.closeMenu(); this.setActive('work')}} className={`link ${activeLink === 'work' ? 'activeLink' : ''}`}>work</Link>
+      <Link to='/about' onClick={() => {this.closeMenu(); this.setActive('about')}}  className={`link ${activeLink === 'about' ? 'activeLink' : ''}`}>about</Link>
+      <a 
+        href='https://drive.google.com/file/d/1ycd6SHMXE-_OwuLs0sbITxal2XJrh6WB/view?usp=sharing' 
+        target='_blank' 
+        className='link'
+        onClick={() => {this.closeMenu(); this.setActive()}} 
+      >
+        resume
+      </a>
+      <Link to='/contact' onClick={() => {this.closeMenu(); this.setActive('contact')}}  className={`link ${activeLink === 'contact' ? 'activeLink' : ''}`}>contact</Link>
+    </>
+
     return (
       <nav className="navbar">
-        <a className='logo' href=''>hb</a>
+        <Link to='/' className='logo' onClick={() => this.setState({ activeLink: '' })}>hb</Link>
         <div className='desktop'>
-          <a href=''>work</a>
-          <a href=''>about</a>
-          <a href=''>resume</a>
-          <a href=''>contact</a>
+          {navLinks}
         </div>
-        <button onClick={this.isMenuOpen}>
+        <button onClick={this.isMenuOpen} className='hamburger-button'>
           {this.state.isMenuOpen ? 
             <i class="material-icons" ref={this.ref}>close</i>
           : 
             <i class="material-icons" ref={this.ref}>view_headline</i>
           }
         </button>
-        {this.state.isMenuOpen && <HomemadeBurger closeMenu={this.closeMenu} />}
+        {this.state.isMenuOpen && <HomemadeBurger navLinks={navLinks}/>}
       </nav>
     )
   }

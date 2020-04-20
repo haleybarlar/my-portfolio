@@ -4,8 +4,11 @@
     margin: 0 -30px;
     background: white;
     position: absolute;
+    z-index: 1;
     padding-top: 10rem;
     padding-left: 50px;
+    display: flex;
+    flex-direction: column;
 
     a {
         text-decoration: none;
@@ -21,12 +24,6 @@
     
     p:hover, a:hover {
         color: #744E4E;
-    }
-}
-
-@media screen and (min-width: 992px) {
-    .homemade-burger {
-        display: none;
     }
 }
 
