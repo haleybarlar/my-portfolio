@@ -1,34 +1,28 @@
-import React, { Component } from 'react'
-import FibersIcon from './FibersIcon.js'
+import React from 'react'
 import '../css/work.scss'
 
-class Work extends Component {
-
-  render() {
-    let developmentProjects = this.props.projects
-      .filter(project => project.type === 'development')
-      .map(project => 
-        <FibersIcon 
-          project={project} 
-          handleClick={this.props.handleClick}
-        />
-      )
-
-    let fibersProjects = this.props.projects.filter(project => project.type === 'fibers').map(project => <FibersIcon project={project} handleClick={this.props.handleClick}/>)
-
-    return (
-      <div className="work">
-        <div className="one">
-          <h2 className="title">DEVELOPMENT</h2>
-          {developmentProjects}
-        </div>
-        <div className="one">
-          <h2 className="title">FIBERS</h2>
-          {fibersProjects}
+export default function Work (props) {
+  const allProjects = props.projects && props.projects.reverse().map(project => {
+    return <div className='project'>
+      <div className='images'>
+        {project.fields.Image && project.fields.Image.map(image => <img src={image.url} alt={project.fields.altText}/>)}
+      </div>
+      <div className='info'>
+        <h1 className='name'>{project.fields.Name}</h1>
+        <p className='description'>{project.fields.Description}</p>
+        <p className='created-using'>created using</p>
+        <p className='stack'>{project.fields.Stack}</p>
+        <div className='links'>
+          <a href={project.fields.Link}>visit site</a>
+          {project.fields.Github && <a href={project.fields.Github}>github</a>}
         </div>
       </div>
-    )
-  }
-}
+    </div>
+  })
 
-export default Work
+  return (
+    <div className='work'>
+      {allProjects}
+    </div>
+  )
+}

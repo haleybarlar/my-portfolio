@@ -1,32 +1,73 @@
 .work {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-row-gap: 2rem;
-  margin-top: 5rem;
+  padding-top: 62px;
+  
+  .project {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e0e0e0;
 
-  .one {
-    display: grid;
-    grid-row-gap: 2rem;
+    .info {
+      padding-top: 20px;
+  
+      .name {
+        font-size: 36px;
+        line-height: 42px;
+      }
+  
+      .description {
+        padding-top: 15px;
+        font-size: 18px;
+        line-height: 21px;
+      }
+  
+      .created-using {
+        font-size: 18px;
+        font-weight: bold;
+        padding-top: 15px;
+      }
+  
+      .stack {
+        font-size: 18px;
+        line-height: 21px;
+      }
+    }
+  
+    .links {
+      padding-top: 30px;
+  
+      a {
+        display: block;
+        color: black;
+        font-size: 18px;
+      }
+    }
   }
 
-  h1 {
-    font-size: 1.5rem;
+  .project:first-child {
+    padding-top: 0;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .work {
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 2rem;
-    margin-top: 6rem;
+    padding-top: 100px;
   }
 }
 
-
-@media screen and (min-width: 992px) {
+@media (min-width: 1080px) {
   .work {
-    img {
-      height: 15.5rem;
+    .project {
+      display: flex;
+
+      .images {
+        img {
+          max-width: 850px;
+        }
+      }
+
+      .info {
+        padding-left: 20px;
+      }
     }
   }
 }
