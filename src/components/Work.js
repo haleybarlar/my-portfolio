@@ -2,7 +2,7 @@ import React from 'react'
 import '../css/work.scss'
 
 export default function Work (props) {
-  const allProjects = props.projects && props.projects.reverse().map(project => {
+  const allProjects = props.projects && props.projects.map(project => {
     return <div className='project'>
       <div className='images'>
         {project.fields.Image && project.fields.Image.map(image => <img src={image.url} alt={project.fields.altText}/>)}

@@ -1,5 +1,7 @@
 .work {
   padding-top: 62px;
+  display: flex;
+  flex-direction: column-reverse;
   
   .project {
     padding-top: 30px;

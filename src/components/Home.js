@@ -1,6 +1,7 @@
 
-import React, { Component } from 'react'
+import React from 'react'
 import '../css/home.scss'
+import { Link } from "react-router-dom"
 
 export default function Home () {
   return (
@@ -29,7 +30,7 @@ export default function Home () {
         </div>
       </div>
       <div className='cta'>
-        <a href="">see some of my work -></a>
+        <Link to='/work'>see some of my work -></Link>
       </div>
     </div>
   )
