@@ -81,7 +81,6 @@ class Navbar extends Component {
           className="link"
           onClick={() => {
             this.closeMenu();
-            this.setActive();
           }}
         >
           resume
