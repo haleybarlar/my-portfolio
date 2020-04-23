@@ -41,6 +41,7 @@ class Navbar extends Component {
     this.setState({
       isMenuOpen: false,
     });
+    document.querySelector("body").classList.add("startScroll");
   };
 
   setActive = (arg) => {
