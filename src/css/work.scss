@@ -2,7 +2,7 @@
   padding-top: 62px;
   display: flex;
   flex-direction: column-reverse;
-  
+
   .project {
     padding-top: 30px;
     padding-bottom: 30px;
@@ -10,33 +10,33 @@
 
     .info {
       padding-top: 20px;
-  
+
       .name {
         font-size: 36px;
         line-height: 42px;
       }
-  
+
       .description {
         padding-top: 15px;
         font-size: 18px;
         line-height: 21px;
       }
-  
+
       .created-using {
         font-size: 18px;
         font-weight: bold;
         padding-top: 15px;
       }
-  
+
       .stack {
         font-size: 18px;
         line-height: 21px;
       }
     }
-  
+
     .links {
       padding-top: 30px;
-  
+
       a {
         display: block;
         color: black;

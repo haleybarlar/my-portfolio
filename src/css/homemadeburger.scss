@@ -1,29 +1,29 @@
 .homemade-burger {
-    height: 100%;
-    width: 100%;
-    margin: 0 -30px;
-    background: white;
-    position: absolute;
-    z-index: 1;
-    padding-top: 10rem;
-    padding-left: 50px;
-    display: flex;
-    flex-direction: column;
+  height: 100%;
+  width: 100%;
+  margin: 0 -30px;
+  background: white;
+  position: absolute;
+  z-index: 1;
+  padding-top: 10rem;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
 
-    a {
-        text-decoration: none;
-        color: black;
-        font-size: 1.8rem;
-    }
-    
-    p {
-        color: black;
-        font-size: 1.8rem;
-        display: inline;
-    }
-    
-    p:hover, a:hover {
-        color: #744E4E;
-    }
+  a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.8rem;
+  }
+
+  p {
+    color: black;
+    font-size: 1.8rem;
+    display: inline;
+  }
+
+  p:hover,
+  a:hover {
+    color: #744e4e;
+  }
 }
-

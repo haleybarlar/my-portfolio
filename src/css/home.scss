@@ -5,7 +5,8 @@
   .greeting {
     padding-bottom: 52px;
 
-    h1, h2 {
+    h1,
+    h2 {
       font-size: 36px;
       line-height: 50px;
     }
@@ -16,7 +17,7 @@
   }
 
   .get-excited {
-    background: #FEC4C4;
+    background: #fec4c4;
     padding: 86px 0;
     padding-left: 33px;
     margin: 0 -32px;
@@ -64,25 +65,25 @@
   .home {
     .main {
       display: flex;
-  
+
       .greeting {
-        width: 50%
-      }
-  
-        .get-excited {
-          width: 50%;
-          margin: 0;
-          padding: 213px 54px;
-          text-align: right;
-    
-          .list {
-            text-align: right;
-          }
-        }
+        width: 50%;
       }
 
-      .cta {
-        text-align: left;
+      .get-excited {
+        width: 50%;
+        margin: 0;
+        padding: 213px 54px;
+        text-align: right;
+
+        .list {
+          text-align: right;
+        }
       }
     }
+
+    .cta {
+      text-align: left;
+    }
   }
+}
