@@ -19,7 +19,7 @@
     "serialize-javascript": "^3.0.0"
   },
   "scripts": {
-    "start": "react-scripts start -r dotenv/config webpack --config",
+    "start": "react-scripts start -r dotenv/config",
     "build": "react-scripts build -r dotenv/config",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

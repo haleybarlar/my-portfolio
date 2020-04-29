@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Work from "./components/Work";
 import About from "./components/About";
-import "./App.css";
+import "./App.css"
 
 function App() {
   return (
