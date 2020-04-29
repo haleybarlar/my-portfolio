@@ -28,7 +28,7 @@ export default function About() {
   return (
     <div className="about">
       <div className="img-border">
-        <img src={about && about.fields.Attachments[0].url} alt='haley barlar standing and smiling'/>
+        <img src={about && about.fields.Attachments[0].url} alt='haley barlar outside smiling'/>
       </div>
       <div className="paragraphs">
         <p>{paragraphs && paragraphs[0]}</p>
