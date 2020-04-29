@@ -20,7 +20,7 @@
   },
   "scripts": {
     "start": "react-scripts start -r dotenv/config webpack --config",
-    "build": "react-scripts build",
+    "build": "react-scripts build -r dotenv/config",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy": "/Users/haleybarlar/.nvm/versions/node/v6.11.2/lib/node_modules/node/lib/node_modules/surge/lib/cli.js"

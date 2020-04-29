@@ -9,7 +9,7 @@ export default function Work(props) {
   }, []);
 
   const fetchAll = async () => {
-    const key = "keyWviNJiEc3mUgXV";
+    const key = process.env.REACT_APP_AIRTABLE_API_KEY;
     const url = "https://api.airtable.com/v0/appa3x0Ddhl3fU1h9/Table%201%20/";
 
     const resp = await fetch(url, {
