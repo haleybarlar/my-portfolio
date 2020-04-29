@@ -17,7 +17,7 @@
     "react-youtube": "^7.8.0"
   },
   "scripts": {
-    "start": "react-scripts start -r dotenv/config",
+    "start": "react-scripts start -r dotenv/config webpack --config",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
