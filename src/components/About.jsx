@@ -9,7 +9,7 @@ export default function About() {
   }, []);
 
   const fetchAll = async () => {
-    const key = process.env.AIRTABLE_API_KEY;
+    const key = process.env.REACT_APP_AIRTABLE_API_KEY;
     const url =
       "https://api.airtable.com/v0/appa3x0Ddhl3fU1h9/About?maxRecords=3&view=Grid%20view";
 
