@@ -29,6 +29,14 @@ class Footer extends Component {
         >
           <i class="fa fa-behance" />
         </a>
+        <a
+          href="https://twitter.com/haley_barlar"
+          alt=""
+          target="_blank"
+          aria-label="behance"
+        >
+          <i class="fa fa-twitter" />
+        </a>
       </div>
     );
   }
