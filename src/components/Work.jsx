@@ -24,7 +24,7 @@ export default function Work(props) {
 
   const allProjects =
     projects &&
-    projects.map((project) => {
+    projects.reverse().map((project) => {
       return (
         <div className="project">
           <div className="images">

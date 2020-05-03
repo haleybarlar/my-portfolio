@@ -1,52 +1,60 @@
 .home {
-  padding-top: 81px;
-  padding-bottom: 131px;
+  padding-top: 30px;
 
-  .greeting {
-    padding-bottom: 52px;
+  .main {
+    .greeting {
+      display: flex;
 
-    h1,
-    h2 {
-      font-size: 36px;
-      line-height: 50px;
+      .words {
+        padding-left: 20px;
+
+        h1,
+        h2 {
+          font-size: 26px;
+          line-height: 50px;
+        }
+
+        span {
+          font-size: 36px;
+        }
+      }
+
+      img {
+        width: 200px;
+      }
     }
 
-    span {
-      font-size: 48px;
+    .get-excited {
+      border: 1px solid black;
+      border-radius: 10px;
+      padding: 70px 35px;
+      margin-top: 50px;
+
+      h3,
+      .list {
+        font-size: 20px;
+      }
+
+      h3 {
+        font-weight: bold;
+      }
+
+      .list {
+        padding-top: 28px;
+      }
     }
   }
-
-  .get-excited {
-    background: #fec4c4;
-    padding: 86px 0;
-    padding-left: 33px;
-    margin: 0 -32px;
-
-    h3 {
-      font-size: 24px;
-      font-weight: bold;
-      padding-bottom: 26px;
-    }
-
-    p {
-      font-size: 24px;
-      line-height: 28px;
-    }
-  }
-
   .cta {
-    padding-top: 74px;
-    text-align: left;
+    padding-top: 50px;
 
     a {
-      font-size: 20px;
-      font-weight: bold;
-      text-decoration: none;
       color: black;
+      font-size: 24px;
     }
 
     a:hover {
-      text-decoration: underline;
+      cursor: pointer;
+      text-decoration: none;
     }
   }
 }
@@ -54,9 +62,28 @@
 @media (min-width: 768px) {
   .home {
     .main {
-      .get-excited {
-        margin: 0;
+      .greeting {
+        img {
+          width: 300px;
+        }
+
+        .words {
+          align-self: center;
+
+          h1,
+          h2 {
+            font-size: 36px;
+          }
+
+          span {
+            font-size: 48px;
+          }
+        }
       }
+    }
+
+    .cta {
+      padding-top: 50px;
     }
   }
 }
@@ -64,26 +91,19 @@
 @media (min-width: 1080px) {
   .home {
     .main {
-      display: flex;
-
       .greeting {
-        width: 50%;
+        img {
+          width: 400px;
+        }
+
+        .words {
+          padding-left: 30px;
+        }
       }
 
       .get-excited {
-        width: 50%;
-        margin: 0;
-        padding: 213px 54px;
-        text-align: right;
-
-        .list {
-          text-align: right;
-        }
+        padding: 108px 193px;
       }
-    }
-
-    .cta {
-      text-align: left;
     }
   }
 }

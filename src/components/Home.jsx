@@ -7,31 +7,26 @@ export default function Home() {
     <div className="home">
       <div className="main">
         <div className="greeting">
-          <h1>hey, i’m haley.</h1>
-          <h2>
-            i’m a <span>frontend engineer</span> at blacklane.
-          </h2>
+          <img 
+            src='./blindContour.png'
+            alt='Illustration of a woman'
+          />
+          <div className='words'>
+            <h1>hey, i’m haley.</h1>
+            <h2>
+              i’m a <span>frontend engineer</span> at blacklane.
+            </h2>
+          </div>
         </div>
         <div className="get-excited">
           <h3>i get excited about</h3>
           <div className="list">
-            <p>accessibility,</p>
-            <p>react.js,</p>
-            <p>html + css,</p>
-            <p>sass,</p>
-            <p>typescript,</p>
-            <p>javascript,</p>
-            <p>figma,</p>
-            <p>npm,</p>
-            <p>git,</p>
-            <p>downshift,</p>
-            <p>agile,</p>
-            <p>svelte.js</p>
+            <p>accessibility, react.js, html + css, sass, typescript, javascript, figma, svelte, ux/ui</p>
           </div>
         </div>
       </div>
       <div className="cta">
-        <Link to="/work">see some of my work -></Link>
+        <Link to="/work">see some of my work</Link>
       </div>
     </div>
   );

@@ -3,8 +3,9 @@
   padding-bottom: 40px;
 
   .img-border {
-    background-color: #fec4c4;
-    padding: 60px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 40px;
   }
 
   p {
@@ -17,10 +18,7 @@
   .about {
     .paragraphs {
       padding-top: 30px;
-      p {
-        font-size: 20px;
-        line-height: 28px;
-      }
+      align-self: center;
     }
   }
 }
@@ -43,9 +41,9 @@
       padding-top: 0px;
       padding-left: 30px;
 
-      p {
-        font-size: 24px;
-      }
+      // p {
+      //   font-size: 24px;
+      // }
 
       p:first-child {
         padding-top: 0;
