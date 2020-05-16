@@ -103,10 +103,8 @@ class Navbar extends Component {
           className="logo"
           onClick={() => this.setState({ activeLink: "" })}
         >
-          <img src="./blindcontour.png" alt="Haley Barlar logo" />
+          <img src="./blindContour.png" alt="Haley Barlar logo" />
         </Link>
-        <img src="./blindcontour.png" alt="Haley Barlar logo" />
-
         <div className="desktop">{navLinks}</div>
         <button onClick={this.isMenuOpen} className="hamburger-button">
           {this.state.isMenuOpen ? (
