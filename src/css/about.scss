@@ -2,14 +2,8 @@
   padding-top: 40px;
   padding-bottom: 40px;
 
-  .img-border {
-    border: 1px solid black;
-    border-radius: 10px;
-    padding: 40px;
-  }
-
   p {
-    font-size: 18px;
+    font-size: 22px;
     padding-top: 20px;
   }
 }
@@ -18,7 +12,6 @@
   .about {
     .paragraphs {
       padding-top: 30px;
-      align-self: center;
     }
   }
 }
@@ -40,10 +33,6 @@
     .paragraphs {
       padding-top: 0px;
       padding-left: 30px;
-
-      // p {
-      //   font-size: 24px;
-      // }
 
       p:first-child {
         padding-top: 0;

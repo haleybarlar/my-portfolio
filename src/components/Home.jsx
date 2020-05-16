@@ -7,26 +7,23 @@ export default function Home() {
     <div className="home">
       <div className="main">
         <div className="greeting">
-          <img 
-            src='./blindContour.png'
-            alt='Illustration of a woman'
-          />
-          <div className='words'>
-            <h1>hey, i’m haley.</h1>
+          <div className="words">
+            <h1>Hey, I’m Haley Barlar.</h1>
             <h2>
-              i’m a <span>frontend engineer</span> at blacklane.
+              I’m a <span>Frontend Engineer</span> at Blacklane.
             </h2>
           </div>
         </div>
+        <p>
+          I studied Fiber Arts at the Savannah College of Art and Design, spent five years abroad working as an
+          English and yoga teacher, and eventually found my place in
+          engineering. Creative coding massively appeals to me, and I enjoy
+          spending my days learning, growing, and exploring.
+        </p>
         <div className="get-excited">
-          <h3>i get excited about</h3>
-          <div className="list">
-            <p>accessibility, react.js, html + css, sass, typescript, javascript, figma, svelte, ux/ui</p>
-          </div>
+          <p><span>I get excited about:</span> Accessibility, React.js, HTML + CSS, SASS, Typescript, Javascript,
+              Figma, Svelte, UX/UI, P5.js, and being a good person during code review</p>
         </div>
-      </div>
-      <div className="cta">
-        <Link to="/work">see some of my work</Link>
       </div>
     </div>
   );

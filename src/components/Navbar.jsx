@@ -55,7 +55,7 @@ class Navbar extends Component {
 
     const navLinks = (
       <>
-        <Link
+        {/* <Link
           to="/work"
           onClick={() => {
             this.closeMenu();
@@ -64,7 +64,7 @@ class Navbar extends Component {
           className={`link ${activeLink === "/work" ? "activeLink" : ""}`}
         >
           work
-        </Link>
+        </Link> */}
         <Link
           to="/about"
           onClick={() => {
@@ -73,7 +73,7 @@ class Navbar extends Component {
           }}
           className={`link ${activeLink === "/about" ? "activeLink" : ""}`}
         >
-          about
+          About
         </Link>
         <a
           href="https://drive.google.com/file/d/1z9XTTc2ZSKkUID1LuLdMPrOnJHsfYDfG/view?usp=sharing"
@@ -83,7 +83,7 @@ class Navbar extends Component {
             this.closeMenu();
           }}
         >
-          resume
+          Resume
         </a>
         <a
           href="mailto:hbarlar1@gmail.com"
@@ -91,7 +91,7 @@ class Navbar extends Component {
           className="link"
           target="_blank"
         >
-          contact
+          Contact
         </a>
       </>
     );
@@ -103,7 +103,7 @@ class Navbar extends Component {
           className="logo"
           onClick={() => this.setState({ activeLink: "" })}
         >
-          hb
+          <img src='./blindcontour.png' alt='Haley Barlar logo'/>
         </Link>
         <div className="desktop">{navLinks}</div>
         <button onClick={this.isMenuOpen} className="hamburger-button">
