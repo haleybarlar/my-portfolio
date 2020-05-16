@@ -105,6 +105,8 @@ class Navbar extends Component {
         >
           <img src="./blindcontour.png" alt="Haley Barlar logo" />
         </Link>
+        <img src="./blindcontour.png" alt="Haley Barlar logo" />
+
         <div className="desktop">{navLinks}</div>
         <button onClick={this.isMenuOpen} className="hamburger-button">
           {this.state.isMenuOpen ? (
