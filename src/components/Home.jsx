@@ -15,7 +15,7 @@ export default function Home() {
           </div>
         </div>
         <p>
-          I studied Fiber Arts at the Savannah College of Art and Design, spent five years abroad working as an
+          I studied Fiber Arts at the Savannah College of Art and Design, spent four years abroad working as an
           English and yoga teacher, and eventually found my place in
           engineering. Creative coding massively appeals to me, and I enjoy
           spending my days learning, growing, and exploring.
