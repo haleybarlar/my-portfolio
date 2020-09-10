@@ -55,16 +55,6 @@ class Navbar extends Component {
 
     const navLinks = (
       <>
-        {/* <Link
-          to="/work"
-          onClick={() => {
-            this.closeMenu();
-            this.setActive("/work");
-          }}
-          className={`link ${activeLink === "/work" ? "activeLink" : ""}`}
-        >
-          work
-        </Link> */}
         <Link
           to="/about"
           onClick={() => {
@@ -76,7 +66,7 @@ class Navbar extends Component {
           About
         </Link>
         <a
-          href="https://drive.google.com/file/d/1seNVd0x7j6HgdTutdUqGeyqKAjllbgRU/view?usp=sharing"
+          href="https://drive.google.com/file/d/1a39r7-xJEbk9NWjeI4-sYiiBTZ7Jj491/view?usp=sharing"
           target="_blank"
           className="link"
           onClick={() => {
