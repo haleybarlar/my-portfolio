@@ -66,7 +66,7 @@ class Navbar extends Component {
           About
         </Link>
         <a
-          href="https://drive.google.com/file/d/1a39r7-xJEbk9NWjeI4-sYiiBTZ7Jj491/view?usp=sharing"
+          href="https://drive.google.com/file/d/1ysNSrArLcrD27_6uNFhldqA8srgdVGIE/view?usp=sharing"
           target="_blank"
           className="link"
           onClick={() => {
