@@ -11,7 +11,7 @@ export default function Home() {
           <div className="words">
             <h1>Hey, I’m Haley Barlar.</h1>
             <h2>
-              I’m a <span>UX/UI Engineer</span> at Monstro.
+              I’m a <span>UI Engineer</span> at SalesLoft.
             </h2>
           </div>
         </div>
