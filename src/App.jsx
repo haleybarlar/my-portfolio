@@ -1,10 +1,9 @@
 import React from "react";
 import { Route, Switch, withRouter } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Home from "./components/Home";
-import Work from "./components/Work";
-import About from "./components/About";
+import { Navbar } from "./components/Navbar.tsx";
+import { Footer } from "./components/Footer.tsx";
+import { Home } from "./components/Home.tsx";
+import { About } from "./components/About.tsx";
 import "./App.css"
 
 function App() {
@@ -13,7 +12,6 @@ function App() {
       <Navbar />
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/work" component={Work} />
         <Route exact path="/about" component={About} />
       </Switch>
       <Footer />
