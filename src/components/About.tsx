@@ -3,8 +3,14 @@ import styled from "styled-components";
 
 const AboutContainer = styled.section`
   display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 20px;
   margin-top: 42px;
+
+  @media(min-width: 1080px) {
+    flex-direction: row;
+  }
 `;
 
 const StyledImage = styled.img`
@@ -14,9 +20,14 @@ const StyledImage = styled.img`
 
 const StyledParagraph = styled.p`
   margin-top: 8px;
+  font-size: 24px;
 
   &:first-child {
     margin-top: 0;
+  }
+
+  @media(min-width: 1080px) {
+    font-size: 18px;
   }
 `;
 

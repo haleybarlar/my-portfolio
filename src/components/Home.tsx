@@ -6,21 +6,34 @@ const HomeContentContainer = styled.section`
 `;
 
 const StyledHeader = styled.h1`
-  font-size: 36px;
+  font-size: 44px;
   font-weight: bold;
+
+  @media(min-width: 1080px) {
+    font-size: 36px;
+  }
 `;
 
 const StyledSubHead = styled.h2`
-  font-size: 24px;
+  font-size: 34px;
   margin-top: 4px;
+
+  @media(min-width: 1080px) {
+    font-size: 24px;
+  }
 `;
 
 const StyledParagraph = styled.p`
-  font-size: 16px;
-  margin-top: 28px;
+  font-size: 24px;
+  margin-top: 16px;
 
   &:last-child {
     margin-top: 8px;
+  }
+
+  @media(min-width: 1080px) {
+    margin-top: 28px;
+    font-size: 18px;
   }
 `;
 
