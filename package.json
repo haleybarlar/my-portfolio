@@ -8,7 +8,7 @@
     "braces": "^3.0.2",
     "dotenv": "^8.2.0",
     "material-design-icons": "^3.0.1",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-modal": "^3.11.2",
