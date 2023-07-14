@@ -1,30 +1,39 @@
 import * as React from "react";
 import { Route, Switch, withRouter } from "react-router-dom";
-import { Navbar } from "./components/Navbar";
-import { Footer } from "./components/Footer";
-import { Home } from "./components/Home";
-import { Work } from "./components/Work";
-import { About } from "./components/About";
-import "./App.css";
 import styled from "styled-components";
+import { Navbar } from "./components/navbar/Navbar";
+import { Footer } from "./components/footer/Footer";
+import { Home } from "./components/home/Home";
+import { About } from "./components/about/About";
+import { Resume } from "./components/resume/Resume";
+import { Contact } from "./components/contact/Contact";
+
+const AppWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: auto;
+`;
 
 const MainSectionLayout = styled.main`
-  padding: 24px;
+  flex: 1;
+  padding: 0 40px;
 `;
 
 function App() {
   return (
-    <div className="App">
+    <AppWrapper>
       <Navbar />
       <MainSectionLayout>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/work" component={Work} />
           <Route exact path="/about" component={About} />
+          <Route exact path="/resume" component={Resume} />
+          <Route exact path="/contact" component={Contact} />
         </Switch>
       </MainSectionLayout>
       <Footer />
-    </div>
+    </AppWrapper>
   );
 }
 

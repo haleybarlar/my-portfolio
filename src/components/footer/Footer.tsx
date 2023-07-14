@@ -1,28 +1,5 @@
 import * as React from "react";
-import styled from "styled-components";
-
-const StyledFooter = styled.footer`
-  position: absolute;
-  bottom: 0;
-  padding: 36px 0;
-  border-top: 1px solid grey;
-  width: 100%;
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-`;
-
-const StyledLink = styled.a`
-  color: black;
-
-  &:hover {
-    color: grey;
-  }
-
-  i {
-    font-size: 28px;
-  }
-`;
+import { StyledFooter, StyledLink } from "./Footer.styles";
 
 export const Footer = () => {
   return (
