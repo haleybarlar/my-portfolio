@@ -3,13 +3,16 @@ body {
   font-family: 'Karla', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
 }
 
 html {
   box-sizing: border-box;
   font-size: 16px;
-  margin: 100px 30px;
-  margin-top: 38px;
+  /* margin: 100px 30px; */
+  /* margin-top: 38px; */
+  height: 100%;
+  overflow: hidden;
 }
 
 .stopScroll {
@@ -20,11 +23,11 @@ html {
   overflow: scroll;
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   html {
     margin: 40px 100px;
   }
-}
+} */
 
 *, *:before, *:after {
   box-sizing: inherit;
