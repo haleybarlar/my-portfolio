@@ -13,6 +13,7 @@ const AppWrapper = styled.div`
   flex-direction: column;
   height: 100vh;
   overflow: auto;
+  min-height: -webkit-fill-available;
 `;
 
 const MainSectionLayout = styled.main`
