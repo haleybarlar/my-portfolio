@@ -15,9 +15,7 @@ export const Navbar = () => {
       <RightLinks>
         <>
           <li>
-            <StyledLink to="/" exact>
-              home
-            </StyledLink>
+            <StyledLink to="/">home</StyledLink>
           </li>
           /
           <li>

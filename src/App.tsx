@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Route, Switch, withRouter } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import styled from "styled-components";
 import { Navbar } from "./components/navbar/Navbar";
 import { Footer } from "./components/footer/Footer";
@@ -20,21 +20,19 @@ const MainSectionLayout = styled.main`
   padding: 0 40px;
 `;
 
-function App() {
+export const App = () => {
   return (
     <AppWrapper>
       <Navbar />
       <MainSectionLayout>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/about" component={About} />
-          <Route exact path="/resume" component={Resume} />
-          <Route exact path="/contact" component={Contact} />
-        </Switch>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
       </MainSectionLayout>
       <Footer />
     </AppWrapper>
   );
-}
-
-export default withRouter(App);
+};
