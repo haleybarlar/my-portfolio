@@ -23,7 +23,7 @@ export const Resume = () => {
   return (
     <ResumeContainer>
       <span>
-        <ScreenReaderOnly>Resume</ScreenReaderOnly>
+        <ScreenReaderOnly as="h1">Resume</ScreenReaderOnly>
         <StyledName>Haley Barlar</StyledName>
         <StyledDescription>
           I’m a design-oriented UI engineer with a focus on acccessibility, user

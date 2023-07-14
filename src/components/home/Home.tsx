@@ -12,7 +12,7 @@ import { ScreenReaderOnly } from "../../helpers/HelperStyles";
 export const Home = () => {
   return (
     <span>
-      <ScreenReaderOnly>Home</ScreenReaderOnly>
+      <ScreenReaderOnly as="h1">Home</ScreenReaderOnly>
       <StyledHomeContentWrapper>
         <StyledIntroductionWrapper>
           <StyledIntroduction>Hey, I'm Haley Barlar.</StyledIntroduction>

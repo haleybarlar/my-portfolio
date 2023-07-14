@@ -4,10 +4,12 @@ import {
   StyledLink,
   StyledContactType,
 } from "./Contact.styles";
+import { ScreenReaderOnly } from "../../helpers/HelperStyles";
 
 export const Contact = () => {
   return (
     <ContactWrapper>
+      <ScreenReaderOnly as="h1">Contact</ScreenReaderOnly>
       <ul>
         <li>
           <StyledContactType>Email:</StyledContactType> hbarlar1@gmail.com
