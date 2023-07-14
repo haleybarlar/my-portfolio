@@ -11,8 +11,7 @@ import { Contact } from "./components/contact/Contact";
 const AppWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  overflow: auto;
+gi  overflow: auto;
   min-height: -webkit-fill-available;
 `;
 
