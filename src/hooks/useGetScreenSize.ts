@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export const getScreenSize = () => {
+export const useGetScreenSize = () => {
   const [screenSize, getDimension] = useState({
     dynamicWidth: window.innerWidth,
   });

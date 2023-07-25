@@ -1,24 +1,28 @@
 import * as React from "react";
 import { Route, Routes } from "react-router-dom";
 import styled from "styled-components";
-import { Navbar } from "./components/navbar/Navbar";
-import { Footer } from "./components/footer/Footer";
-import { Home } from "./components/home/Home";
-import { About } from "./components/about/About";
-import { Resume } from "./components/resume/Resume";
-import { Contact } from "./components/contact/Contact";
+import { Navbar } from "./pages/navbar/Navbar";
+import { Footer } from "./pages/footer/Footer";
+import { Home } from "./pages/home/Home";
+import { About } from "./pages/about/About";
+import { Resume } from "./pages/resume/Resume";
+import { Contact } from "./pages/contact/Contact";
 
 const AppWrapper = styled.div`
   display: flex;
   flex-direction: column;
   height: 100vh;
   overflow: auto;
-  min-height: -webkit-fill-available;
+  padding-bottom: env(safe-area-inset-bottom);
 `;
 
 const MainSectionLayout = styled.main`
   flex: 1;
   padding: 0 40px;
+
+  @media (max-width: 768px) {
+    margin-bottom: ;
+  }
 `;
 
 export const App = () => {

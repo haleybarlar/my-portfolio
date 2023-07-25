@@ -3,7 +3,6 @@ import {
   AboutWrapper,
   StyledAboutImage,
   StyledDescription,
-  StyledIntroduction,
   StyledAboutTextWrapper,
   StyledDescriptionWrapper,
 } from "./About.styles";
@@ -19,7 +18,6 @@ export const About = () => {
           alt="Haley stands in front of a brick wall with a small smile. She is wearing a black jacket and has long blonde hair."
         />
         <StyledAboutTextWrapper>
-          <StyledIntroduction>Hi. My name is Haley Barlar.</StyledIntroduction>
           <StyledDescriptionWrapper>
             <StyledDescription>
               I am a frontend engineer with a focus on accessibilty, UX, and
@@ -31,10 +29,10 @@ export const About = () => {
             <StyledDescription>
               I work primarily with Typescript and React, and I'm a big fan of
               CSS. I have experience using both Styled Components and Tailwind,
-              and while I have opinions on both, I believe that they're both
+              and while I have opinions on both, I believe they're both just
               tools used to reach the same outcome. Deciding on whether or not
-              to focus on accessibility is the hill I choose to die on, and I
-              always am in favor of doing what is best for the user.
+              to focus on accessibility is what I care most about, and I always
+              am in favor of doing what is best for the user.
             </StyledDescription>
             <StyledDescription>
               When I'm not working, I'm probably trail running, crying over cute

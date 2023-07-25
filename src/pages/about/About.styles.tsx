@@ -23,10 +23,6 @@ export const StyledAboutImage = styled.img`
   }
 `;
 
-export const StyledIntroduction = styled.p`
-  font-size: 26px;
-`;
-
 export const StyledDescription = styled.p`
   font-size: 18px;
 `;
