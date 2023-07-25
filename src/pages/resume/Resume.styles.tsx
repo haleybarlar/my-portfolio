@@ -37,7 +37,7 @@ export const StyledDescription = styled.p`
   font-size: 18px;
 `;
 
-export const StyledExperienceColumn = styled.span`
+export const StyledColumnContent = styled.span`
   display: flex;
   flex-direction: column;
   gap: 10px;

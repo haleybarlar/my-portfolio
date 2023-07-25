@@ -13,10 +13,10 @@ import {
   StyledEducationWhereAndWhen,
   ResumeContainer,
   StyledLine,
-  StyledExperienceColumn,
   StyledUL,
   StyledSecondColumn,
   StyledColumns,
+  StyledColumnContent,
 } from "./Resume.styles";
 
 export const Resume = () => {
@@ -31,22 +31,26 @@ export const Resume = () => {
         </StyledDescription>
         <StyledLine />
         <StyledColumns>
-          <StyledExperienceColumn>
+          <span>
             <StyledSectionHeader>Experience</StyledSectionHeader>
-            {experienceContent.map((experience) => (
-              <span>
-                <StyledPositionTitle>{experience.position}</StyledPositionTitle>
-                <StyledWhereAndWhen>
-                  {experience.whereAndWhen}
-                </StyledWhereAndWhen>
-                <StyledUL>
-                  {experience.bulletPoints.map((point) => (
-                    <StyledExperienceBullet>{point}</StyledExperienceBullet>
-                  ))}
-                </StyledUL>
-              </span>
-            ))}
-          </StyledExperienceColumn>
+            <StyledColumnContent>
+              {experienceContent.map((experience) => (
+                <span>
+                  <StyledPositionTitle>
+                    {experience.position}
+                  </StyledPositionTitle>
+                  <StyledWhereAndWhen>
+                    {experience.whereAndWhen}
+                  </StyledWhereAndWhen>
+                  <StyledUL>
+                    {experience.bulletPoints.map((point) => (
+                      <StyledExperienceBullet>{point}</StyledExperienceBullet>
+                    ))}
+                  </StyledUL>
+                </span>
+              ))}
+            </StyledColumnContent>
+          </span>
           <StyledSecondColumn>
             <StyledListSectionWrapper>
               <StyledSectionHeader>Skills</StyledSectionHeader>
@@ -56,19 +60,21 @@ export const Resume = () => {
             </StyledListSectionWrapper>
             <span>
               <StyledSectionHeader>Education</StyledSectionHeader>
-              {education.map((school) => (
-                <span>
-                  <StyledEducationProgram>
-                    {school.program}
-                  </StyledEducationProgram>
-                  <StyledEducationWhereAndWhen>
-                    {school.school}
-                  </StyledEducationWhereAndWhen>
-                  <StyledEducationWhereAndWhen>
-                    {school.dates}
-                  </StyledEducationWhereAndWhen>
-                </span>
-              ))}
+              <StyledColumnContent>
+                {education.map((school) => (
+                  <span>
+                    <StyledEducationProgram>
+                      {school.program}
+                    </StyledEducationProgram>
+                    <StyledEducationWhereAndWhen>
+                      {school.school}
+                    </StyledEducationWhereAndWhen>
+                    <StyledEducationWhereAndWhen>
+                      {school.dates}
+                    </StyledEducationWhereAndWhen>
+                  </span>
+                ))}
+              </StyledColumnContent>
             </span>
           </StyledSecondColumn>
         </StyledColumns>
